@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "CreateNew";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create New Student</h2>
+
+<form method="post" action="/Student/Create">
+    <div class="row mb-3">
+        <label for="Id" class="col-sm-2 col-form-label">Id</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="Id" name="Id">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="Name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="Name" name="Name">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="Age" class="col-sm-2 col-form-label">Age</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="Age" name="Age">
+        </div>
+    </div>
+
+    <fieldset class="row mb-3">
+        <label for="HId" class="col-sm-2 col-form-label">House Id:<br /> 1-Gryffindore <br /> 2-Hufflepuff <br /> 3-Ravenclaw<br /> 4-Slytherin</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="HId" name="HId">
+
+        </div>
+    </fieldset>
+
+    <div class="row mb-3">
+        <input type="submit" value="Create" class="btn btn-success">
+    </div>
+</form>

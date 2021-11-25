@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Day16Lab14.Models.Student>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <a href="/Student/CreateNew" class="btn btn-success">Create New</a>
+</div>
+
+<table class="table table-bordered table-hover table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>House</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+                <td>@item.House.HName</td>
+                <td>
+                    <a href="/Student/Edit/@item.Id" class="btn btn-warning">Edit</a> | 
+                    <a href="/Student/Details/@item.Id" class="btn btn-info">Details</a> | 
+                    <a href="/Student/Delete/@item.Id" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete @item.Name');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 

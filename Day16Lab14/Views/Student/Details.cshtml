@@ -1,0 +1,15 @@
+﻿@model Student
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<h1>@Model.Name</h1>
+<h1>@Model.Age</h1>
+<h1>@Model.House.HName</h1>
+
+<div class="row mb-3">
+    <a href="/" class="btn btn-secondary">Back to Index</a>
+</div>
